@@ -11,7 +11,7 @@ public class TelefonoService {
     @Autowired
     private TelefonoRepository telefonoRepository;
 
-    private Telefono getTelefono() {
+    public Telefono getTelefono() {
         return telefonoRepository.findById(1L).orElseGet(() -> {
             Telefono telefono = new Telefono();
             telefono.setId(1L); 
